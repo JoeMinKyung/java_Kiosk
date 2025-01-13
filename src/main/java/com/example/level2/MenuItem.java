@@ -28,7 +28,7 @@ public class MenuItem {
         return menuDescription;
     }
 
-    // 메뉴 출력
+    // 메뉴 출력 포멧 메서드
     @Override
     public String toString() {
         return String.format("%d. %-14s | W %.1f | %s", menuNumber, menuName, menuPrice, menuDescription);
