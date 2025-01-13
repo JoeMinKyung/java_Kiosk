@@ -31,6 +31,6 @@ public class MenuItem {
     // 메뉴 출력
     @Override
     public String toString() {
-        return String.format("%d. %s   | W %.1f | %s", menuNumber, menuName, menuPrice, menuDescription);
+        return String.format("%d. %-14s | W %.1f | %s", menuNumber, menuName, menuPrice, menuDescription);
     }
 }
