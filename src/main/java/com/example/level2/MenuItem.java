@@ -1,12 +1,15 @@
 package com.example.level2;
 
 public class MenuItem {
+    private static int count = 1; // 메뉴 번호 증가 변수
+    private int menuNumber; // 메뉴 번호
     private String menuName;
     private double menuPrice;
     private String menuDescription;
 
     // 생성자
     public MenuItem(String menuName, double menuPrice, String menuDescription) {
+        this.menuNumber = count++;
         this.menuName = menuName;
         this.menuPrice = menuPrice;
         this.menuDescription = menuDescription;
@@ -28,6 +31,6 @@ public class MenuItem {
     // 메뉴 출력
     @Override
     public String toString() {
-        return String.format("%s   | W %.1f | %s", menuName, menuPrice, menuDescription);
+        return String.format("%d. %s   | W %.1f | %s", menuNumber, menuName, menuPrice, menuDescription);
     }
 }
