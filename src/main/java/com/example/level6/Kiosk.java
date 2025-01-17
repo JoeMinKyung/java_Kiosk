@@ -122,4 +122,9 @@ public class Kiosk {
         cart.clearItems();
     }
 
+    // 주문 취소
+    private void cancelOrder() {
+        cart.clearItems();
+        System.out.println("진행 중인 주문이 취소되었습니다.");
+    }
 }
