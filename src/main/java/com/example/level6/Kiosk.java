@@ -44,6 +44,12 @@ public class Kiosk {
                     break;
                 }
 
+                // 장바구니 관련 동작
+                if (orderNumber == 4 && !cart.isEmpty()) { // 장바구니 보여주기
+                    showCart();
+                } else if (orderNumber == 5 && !cart.isEmpty()) { // 주문 취소하기
+                    cancelOrder();
+                }
                 // 메뉴 번호 유효성 검사
                 if (orderNumber > 0 && orderNumber <= menus.size()) {
                     // 선택된 메뉴 출력
