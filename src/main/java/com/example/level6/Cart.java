@@ -28,4 +28,8 @@ public class Cart {
         }
     }
 
+    // 총 금액 계산
+    public double calculateTotalPrice() {
+        return items.stream().mapToDouble(MenuItem::getMenuPrice).sum();
+    }
 }
