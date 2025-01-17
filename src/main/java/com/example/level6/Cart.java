@@ -11,5 +11,10 @@ public class Cart {
         items.add(item);
     }
 
+    // 장바구니 비우기
+    public void clearItems() {
+        items.clear();
+    }
+
 
 }
