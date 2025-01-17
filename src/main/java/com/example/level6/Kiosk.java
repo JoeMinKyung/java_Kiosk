@@ -93,11 +93,13 @@ public class Kiosk {
                     System.out.printf("\n\"%s\"%n", selectedItem.toStringWithoutNumber());
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
                     System.out.println("1. 확인        2. 취소");
+
                     int confirm = Integer.parseInt(sc.nextLine());
 
                     if (confirm == 1) {
                         cart.addItem(selectedItem);
                         System.out.println(selectedItem.getMenuName() + " 이 장바구니에 추가되었습니다.");
+                        break; // Main menu로 돌아가기
                     }
                 } else {
                     System.out.println("잘못된 입력입니다. 0부터 " + menu.getMenuItems().size() + "까지의 숫자를 입력해주세요.");
