@@ -24,6 +24,13 @@ public class Kiosk {
             }
             System.out.println("0. 종료      | 종료");
 
+            // Order Menu 출력
+            if (!cart.isEmpty()) {
+                System.out.println("\n[ ORDER MENU ]");
+                System.out.println("4. Orders       | 장바구니를 확인 후 주문합니다.");
+                System.out.println("5. Cancel       | 진행중인 주문을 취소합니다.");
+            }
+
             // 숫자 입력
             String input = sc.nextLine();
 
