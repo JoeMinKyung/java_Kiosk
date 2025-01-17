@@ -16,5 +16,16 @@ public class Cart {
         items.clear();
     }
 
+    // 장바구니 항목 출력
+    public void printCart() {
+        if (items.isEmpty()) {
+            System.out.println("장바구니가 비어 있습니다.");
+        }
+
+        System.out.println("[ Orders ]");
+        for (MenuItem item : items) {
+            System.out.println(item.toStringWithoutNumber());
+        }
+    }
 
 }
