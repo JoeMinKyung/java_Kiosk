@@ -44,14 +44,12 @@ public class Kiosk {
                     break;
                 }
 
-                // 장바구니 관련 동작
+                // 입력된 번호에 따라 메뉴 처리하기
                 if (orderNumber == 4 && !cart.isEmpty()) { // 장바구니 보여주기
                     showCart();
                 } else if (orderNumber == 5 && !cart.isEmpty()) { // 주문 취소하기
                     cancelOrder();
-                }
-                // 메뉴 번호 유효성 검사
-                if (orderNumber > 0 && orderNumber <= menus.size()) {
+                } else if (orderNumber > 0 && orderNumber <= menus.size()) { // 메뉴 번호 유효성 검사
                     // 선택된 메뉴 출력
                     Menu selectedMenu = menus.get(orderNumber - 1);
                     printMenu(sc, selectedMenu);
@@ -99,6 +97,22 @@ public class Kiosk {
                 // 숫자가 아닌 입력 처리
                 System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");
             }
+        }
+    }
+
+    // 장바구니 출력 및 주문 확인
+    private void showCart() {
+        // 장바구니 목록 출력
+        cart.printCart();
+
+        double total = cart.calculateTotalPrice();
+        System.out.printf("\n[ Total ]%nW %.2f%n", total);
+
+        System.out.println("\n1. 주문      2. 메뉴판");
+        int choice = Integer.parseInt(sc.nextLine());
+
+        if (choice == 1) {
+            completeOrder(total);
         }
     }
 }
