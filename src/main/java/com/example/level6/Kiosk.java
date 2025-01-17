@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Kiosk {
     private Scanner sc = new Scanner(System.in);
     private List<Menu> menus = new ArrayList<>(); // 여러 메뉴 카테고리 관리
+    private Cart cart = new Cart(); // 장바구니 관리
 
     // 메뉴 카테고리 추가
     public void addMenu(Menu menu) {
