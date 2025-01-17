@@ -32,4 +32,9 @@ public class Cart {
     public double calculateTotalPrice() {
         return items.stream().mapToDouble(MenuItem::getMenuPrice).sum();
     }
+
+    // 장바구니 비었는지 확인
+    public boolean isEmpty() {
+        return items.isEmpty();
+    }
 }
