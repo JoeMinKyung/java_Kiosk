@@ -115,4 +115,11 @@ public class Kiosk {
             completeOrder(total);
         }
     }
+
+    // 주문 완료
+    private void completeOrder(double total) {
+        System.out.printf("주문이 완료되었습니다. 금액은 W %.2f 입니다.%n", total);
+        cart.clearItems();
+    }
+
 }
