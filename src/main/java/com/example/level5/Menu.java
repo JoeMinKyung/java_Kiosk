@@ -29,6 +29,11 @@ public class Menu {
         return menuItems;
     }
 
+    // Setter
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     // 카테고리 내 메뉴 항목 출력
     public void printMenuItems() {
         for(MenuItem menuItem : menuItems) {

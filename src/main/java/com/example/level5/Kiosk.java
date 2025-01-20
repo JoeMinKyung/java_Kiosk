@@ -8,6 +8,16 @@ public class Kiosk {
     private Scanner sc = new Scanner(System.in);
     private List<Menu> menus = new ArrayList<>(); // 여러 메뉴 카테고리 관리
 
+    // Getter
+    public List<Menu> getMenus() {
+        return menus;
+    }
+
+    // Setter
+    public void setMenus(List<Menu> menus) {
+        this.menus = menus;
+    }
+
     // 메뉴 카테고리 추가
     public void addMenu(Menu menu) {
         menus.add(menu);

@@ -16,6 +16,10 @@ public class MenuItem {
     }
 
     // Getter
+    public int getMenuNumber() {
+        return menuNumber;
+    }
+
     public String getMenuName() {
         return menuName;
     }
@@ -26,6 +30,19 @@ public class MenuItem {
 
     public String getMenuDescription() {
         return menuDescription;
+    }
+
+    // Setter
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
+
+    public void setMenuPrice(double menuPrice) {
+        this.menuPrice = menuPrice;
+    }
+
+    public void setMenuDescription(String menuDescription) {
+        this.menuDescription = menuDescription;
     }
 
     // 메뉴 출력
